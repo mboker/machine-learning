@@ -93,8 +93,8 @@ class Simulator(object):
             # Set log files
             if a.learning:
                 if self.optimized: # Whether the user is optimizing the parameters and decay functions
-                    self.log_filename = os.path.join("../logs", "sim_improved-learning.csv")
-                    self.table_filename = os.path.join("../logs","sim_improved-learning.txt")
+                    self.log_filename = os.path.join("../logs", "sim_improved-learning-2.csv")
+                    self.table_filename = os.path.join("../logs","sim_improved-learning-2.txt")
                 else: 
                     self.log_filename = os.path.join("../logs", "sim_default-learning.csv")
                     self.table_filename = os.path.join("../logs","sim_default-learning.txt")
