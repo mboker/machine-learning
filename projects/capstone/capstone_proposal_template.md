@@ -1,10 +1,7 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Proposal
-Joe Udacity  
-December 31st, 2050
-
-## Proposal
-_(approx. 2-3 pages)_
+Michael Boker  
+May 1st, 2017
 
 ### Domain Background
 _(approx. 1-2 paragraphs)_
@@ -12,19 +9,18 @@ _(approx. 1-2 paragraphs)_
 In this section, provide brief details on the background information of the domain from which the project is proposed. Historical information relevant to the project should be included. It should be clear how or why a problem in the domain can or should be solved. Related academic research should be appropriately cited in this section, including why that research is relevant. Additionally, a discussion of your personal motivation for investigating a particular problem in the domain is encouraged but not required.
 
 ### Problem Statement
-_(approx. 1 paragraph)_
 
-In this section, clearly describe the problem that is to be solved. The problem described should be well defined and should have at least one relevant potential solution. Additionally, describe the problem thoroughly such that it is clear that the problem is quantifiable (the problem can be expressed in mathematical or logical terms) , measurable (the problem can be measured by some metric and clearly observed), and replicable (the problem can be reproduced and occurs more than once).
+The ability to predict changes in the stock market is a highly rewarding skill.  However, making these predictions can be quite challenging.  There is so much information to consider, that people must form large teams to try to analyze all of it quickly enough to keep up with market fluctuations.  This is a prime opportunity for machine learning to lend a hand.  The idea for this project is to use news headlines to predict market behavior.  Stock values are affected by many factors, but one of the most influential factors is public reaction to current events.  Deep learning methods could be useful for analyzing the news for a day, and predicting the resulting effect on the stock market.  Specifically, predictions would be made as to whether the values of stocks would rise or fall in a given day.  Ideally, models could be created for predicting the behavior of individual stocks, but this project will focus on one of the world’s most popular stock indexes. 
 
 ### Datasets and Inputs
-_(approx. 2-3 paragraphs)_
 
-In this section, the dataset(s) and/or input(s) being considered for the project should be thoroughly described, such as how they relate to the problem and why they should be used. Information such as how the dataset or input is (was) obtained, and the characteristics of the dataset or input, should be included with relevant references and citations as necessary It should be clear how the dataset(s) or input(s) will be used in the project and whether their use is appropriate given the context of the problem.
+The Dow Jones Industrial Average (DJIA) is a stock index, which incorporates the stock values of 30 of the largest companies in America.  An index is the average of a group of stocks.  It reflects the overall performance of that group.  The DJIA is commonly used as an indicator of the overall performance of the stock market as a whole.  The behavior of individual stocks is less predictable than that of a group of stocks, due to the effects of probability being more reliable with a group.  The DJIA would be a good source of information for testing the usefulness of deep learning in stock price prediction.  
+	
+A Kaggle dataset already exists for purposes similar to this project, and it contains data from 1990 days, ranging from the 8th of June, 2008 to the 1st of July, 2016.  This dataset pairs a collection of the top 25 news headlines from each day with a label indicating whether the DJIA rose or fell that day.  The news headlines are taken from the WorldNews subreddit, and are ranked based on user up-votes.  This seems to be a pretty good indicator that these are articles that the general public finds interesting.  Therefore, they are articles that are most likely to elicit a response from the public, which could have an effect on the DJIA.  This dataset can be found at https://www.kaggle.com/aaron7sun/stocknews.
 
 ### Solution Statement
-_(approx. 1 paragraph)_
 
-In this section, clearly describe a solution to the problem. The solution should be applicable to the project domain and appropriate for the dataset(s) or input(s) given. Additionally, describe the solution thoroughly such that it is clear that the solution is quantifiable (the solution can be expressed in mathematical or logical terms) , measurable (the solution can be measured by some metric and clearly observed), and replicable (the solution can be reproduced and occurs more than once).
+Recurrent Neural Networks (RNN) are a popular deep learning technique for text analysis and can be powerful for sentiment analysis.  RNN’s can be used to learn context in a body of text, and not simply learn based on the words present in some text, as would be done with a simple feed-forward neural network and a bag of words.  For example, given a headline such as “United States Prepares to Wage War on Obesity,” an RNN would take the entire headline into consideration.  It might be able to determine that the phrase “Prepares to Wage War” is not referring to literal warfare.  A traditional feed-forward network would see the word “War” and probably determine that this article is about actual warfare, because it does not consider the surrounding context.  The long short-term memory (LSTM) model is a type of RNN, which is a particularly useful tool for sentiment analysis.  It can be used to learn from and predict on entire bodies of text, remembering the context of the entire piece as it goes along.  Other RNN’s have limits in the length of context that they can remember, due to problems encountered during back propagation when too much context is retained.  Therefore, an LSTM RNN will be used for this project.
 
 ### Benchmark Model
 _(approximately 1-2 paragraphs)_
